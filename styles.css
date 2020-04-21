@@ -1,0 +1,21 @@
+div{
+    text-align: center;
+    margin: auto;
+}
+
+.options-container{
+    display: grid;
+    grid-template-columns: 1000px;
+}
+
+.options-title, .options-buttons{
+    display: flex;
+    max-width: 500px;
+    justify-content: space-around;
+    margin: auto;
+    border: 1px grey dotted;
+}
+
+.options-title > h3{
+
+}
