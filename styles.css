@@ -1,6 +1,7 @@
 div{
     text-align: center;
     margin: auto;
+    font-family: Helvetica, sans-serif;
 }
 
 .options-container{
@@ -8,7 +9,7 @@ div{
     grid-template-columns: 1000px;
 }
 
-.options-title, .options-buttons{
+.options-title, .options-buttons, .repeat{
     display: flex;
     max-width: 500px;
     justify-content: space-around;
@@ -16,6 +17,19 @@ div{
     border: 1px grey dotted;
 }
 
-.options-title > h3{
 
+.time-container{
+    text-align: center;
+    margin-top: 50px;
+    border: 1px grey dotted;
+}
+
+.repeat {
+    padding: 10px;
+}
+
+.controls-1, .controls-2{
+    display: flex;
+    max-width: 500px;
+    justify-content: space-around;
 }
