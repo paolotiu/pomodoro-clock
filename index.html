@@ -4,44 +4,46 @@
     <head>
         <link href="styles.css" rel="stylesheet" type="text/css">
         <script src="script.js" type="text/javascript" async></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
         <div class="title">
-            <h2> Pomodoro Clock</h2>
+            <span > Pomodoro Clock</span>
         </div>
         <!-- <div class="options-container"> -->
             <div class="options-title">
-                <h3 class="options" id="session">Session</h3>
-                <h3 class="options" id="break"> Break</h3>
+                <h3 class="options" id="session">Session time</h3>
+                <h3 class="options" id="break"> Break time</h3>
             </div>
             <div class="options-buttons">
-                <h3 class="options" id="up-session" > Up </h3>
+                <h3 class="options btn" id="up-session" > <i class='material-icons'>keyboard_arrow_up</i> </h3>
                 <h3 class="options" id="time-session" > 25</h3>
-                <h3 class="options" id="down-session" > Down</h3>
+                <h3 class="options btn" id="down-session" > <i class='material-icons'>keyboard_arrow_down</i> </h3>
                 
-                <h3 class="options" id="up-break" > Up </h3>
+                <h3 class="options btn" id="up-break" >  <i class='material-icons'>keyboard_arrow_up</i> </h3>
                 <h3 class="options" id="time-break" > 5</h3>
-                <h3 class="options" id="down-break" > Down</h3>     
+                <h3 class="options btn" id="down-break" > <i class='material-icons'>keyboard_arrow_down</i> </h3>     
             </div>
             <div class="repeat">
-                    <div>Repeat</div>
-                    <div id="repeat-up" class="up">Up</div>
+                    <div>Number of sessions</div>
+                    <div id="repeat-up" class="up btn">  <i class='material-icons'>keyboard_arrow_up</i></div>
                     <div class="repeat-times"> 4 </div>
-                    <div id="repeat-down" class="down">Down</div>
-            </div>
+                    <div id="repeat-down" class="down btn"> <i class='material-icons'>keyboard_arrow_down</i> </div>
             </div>
 
             <div class="timer-container">
-                <div class="controls-1">
-                    <div class="play">Play</div>
-                    <div class="reset">Reset</div>
-                </div>
-                <div class="session"> Session</div>
-
+               
+                <div id='sessions-container'> Sessions Left: <span id='sessions-left'> number </span></div>
+                <div class="session">Time to work!</div>
                 <div id="time" class="time"> 25:00 </div>
 
+                <div class="controls-1">
+                    <div class="play btn"> <i class="material-icons">play_arrow</i> </div>
+                    <div class="reset btn"><i class='material-icons'>cached</i></div>
+                </div>
+
             
-                <div id='sessions-container'> Sessions Left: <span id='sessions-left'> number </span></div>
+                
             </div>
             
 

@@ -28,7 +28,7 @@ const PlayButton = document.querySelector('.play');
 
 const sessionShow = document.querySelector('#sessions-container')
 const SessionsLeft = document.querySelector('#sessions-left')
-sessionShow.style.display = 'none'; //hides the div
+ //hides the div
 
 //i think we can put it here
 
@@ -37,25 +37,32 @@ sessionShow.style.display = 'none'; //hides the div
 let running = 0;
 function startPause(){ 
   //we need show sessions left only when we started
-  sessionShow.style.display = 'block'; //shows div
+  sessionShow.style.visibility = 'visible'; //shows div
+  sessionShow.style.opacity = '1';
+
+  sessionOrBreak.style.visibility = "visible";
+  sessionOrBreak.style.opacity = "1";
   
+    
     if (running === 0){ //checks if we started
         running = 1;
         increment();
-        PlayButton.innerHTML = "Pause";
+        PlayButton.innerHTML = "<i class='material-icons'>pause</i>";
     } else { // checks if we paused
         running = 0
-        PlayButton.innerHTML = "Resume"
+        PlayButton.innerHTML = "<i class='material-icons'>play_arrow</i>"
     }
 }
 function reset(){ 
-    sessionShow.style.display = 'none';
     running = 0;
+    sessionOrBreak.style.visibility = "hidden";
+    sessionOrBreak.style.opacity = "0";
+    sessionShow.style.opacity = '0';
     timeleft = (sessionTime*60)+1; 
-    PlayButton.innerHTML = "Start"
+    PlayButton.innerHTML = "<i class='material-icons'>play_arrow</i>"
     SessionAmount = parseInt(SessionRepeatTimes.innerText);
     sessionTime = 25;
-    timeleft = 25*60;
+    timeleft = (25*60) + 1;
     BreakTime = 5;
     display.innerHTML = sessionTime + ':00';
     displayBreakTime.innerText = BreakTime;
@@ -74,7 +81,7 @@ function increment(){ // time function
     }
 
     if(isSession === true){
-        sessionOrBreak.innerText = 'Session'
+        sessionOrBreak.innerText = 'Time to work!'
     }
     else{
         sessionOrBreak.innerText = 'Break'
